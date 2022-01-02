@@ -4,7 +4,6 @@
  */
 package com.mycompany.collab01.storycategory;
 
-import com.mycompany.collab01.myexception.TooYoungException;
 import java.io.File;
 import java.io.IOException;
 
@@ -12,10 +11,10 @@ import java.io.IOException;
  *
  * @author Nathan
  */
-public class HappyStory implements IStory{
+public class HappyStory implements IStory {
 
     @Override
-    public void readStory(String name) throws TooYoungException {
+    public void readStory(String name) throws IOException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -25,8 +24,8 @@ public class HappyStory implements IStory{
     }
 
     @Override
-    public File getStory() throws IOException {
+    public File getStoryRoot() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

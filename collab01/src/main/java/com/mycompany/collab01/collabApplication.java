@@ -28,23 +28,23 @@ public class collabApplication {
     public static void main(String[] args) {
         System.out.println("Application Start!");
         Scanner sc = new Scanner(System.in);
-        String action = null;        
+        String action = null;
         String storylist = null;
-        IStory story;       
+        IStory story;
         do {
             System.out.println("Enter [H]appy | [S]ad | [V]iolent | [Q]uit");
             action = sc.nextLine();
             try {
                 switch (action.toUpperCase().charAt(0)) {
                     case 'H':
-                        story = new HappyStory();                        
+                        story = new HappyStory();
                         storylist = story.findStory();
                         story.readStory(storylist);
                         break;
                     case 'S':
                         story = new SadStory();
                         storylist = story.findStory();
-                        story.readStory(storylist);                        
+                        story.readStory(storylist);
                         break;
                     case 'V':
                         story = new ViolentStory();
@@ -53,10 +53,8 @@ public class collabApplication {
                         story.readStory(storylist);
                         break;
                 }
-            } catch (TooYoungException se) {
-                System.err.println(se.getMessage());
-            } catch (IOException ie){
-                
+            } catch (IOException ex) {
+                System.err.println(ex.getMessage());
             }
 
         } while (!action.equalsIgnoreCase("Q"));

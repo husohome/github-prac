@@ -12,11 +12,13 @@ import java.io.IOException;
  *
  * @author Nathan
  */
-public interface IStory{
-    
-    public void readStory(String name) throws TooYoungException;
-    
+public interface IStory {
+
+    public void readStory(String name) throws IOException;
+
     public String findStory() throws IOException;
-    
-    public File getStory() throws IOException;
+
+    public File getStoryRoot();
+
+    //public boolean ageValidation() throws TooYoungException;
 }

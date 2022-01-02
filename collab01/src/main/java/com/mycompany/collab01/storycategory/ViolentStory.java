@@ -15,44 +15,42 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
 /**
  *
  * @author Nathan
  */
-public class ViolentStory implements IStory{
-    
+public class ViolentStory implements IStory {
+
     @Override
-    public void readStory(String name) throws TooYoungException{
-        try{
-            File file = getStory();
-            String storyLocation = file.toString().concat("/"+name+".txt");
-            try(FileReader fr = new FileReader(storyLocation);
-                    BufferedReader br = new BufferedReader(fr)){
-                String storyLine = br.readLine();
-                while(storyLine != null){
-                    System.out.println(storyLine);
-                    storyLine = br.readLine();
-                }
-            }catch(IOException e){
-                throw new IOException("故事不存在");
+    public void readStory(String name) throws IOException {
+
+        File file = getStoryRoot();
+        String storyLocation = file.toString().concat("/" + name + ".txt");
+        try ( FileReader fr = new FileReader(storyLocation);
+                BufferedReader br = new BufferedReader(fr)) {
+            String storyLine = br.readLine();
+            while (storyLine != null) {
+                System.out.println(storyLine);
+                storyLine = br.readLine();
             }
-        }catch(IOException ex){
-            System.out.println(ex.getMessage());
+        } catch (IOException ex) {
+            System.out.println(ex);
+            throw new IOException("故事不存在");
         }
     }
+
     @Override
-    public String findStory() throws IOException{
-        Files.list(Paths.get("storylib/violent")).forEach(System.out::println);        
+    public String findStory() throws IOException {
+        Files.list(Paths.get("storylib/violent")).forEach(System.out::println);
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         return s;
     }
-    
+
     @Override
-    public File getStory() throws IOException{
+    public File getStoryRoot() {
         File file = new File("storylib/violent");
         return file;
     }
-    
+
 }
