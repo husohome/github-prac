@@ -9,7 +9,7 @@ import java.io.IOException;
 
 /**
  *
- * @author Nathan
+ * @author Timothy
  */
 public class HappyStory implements IStory {
 

@@ -8,7 +8,7 @@ package com.mycompany.collab01.myexception;
 
 /**
  *
- * @author Nathan
+ * @author Timothy
  */
 public class TooYoungException extends Exception{
     public TooYoungException(){

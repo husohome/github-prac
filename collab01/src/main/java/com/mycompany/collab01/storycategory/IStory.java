@@ -4,13 +4,12 @@
  */
 package com.mycompany.collab01.storycategory;
 
-import com.mycompany.collab01.myexception.TooYoungException;
 import java.io.File;
 import java.io.IOException;
 
 /**
  *
- * @author Nathan
+ * @author Timothy
  */
 public interface IStory {
 
@@ -20,5 +19,5 @@ public interface IStory {
 
     public File getStoryRoot();
 
-    //public boolean ageValidation() throws TooYoungException;
+    //default boolean ageCheck() throws TooYoungException{}
 }

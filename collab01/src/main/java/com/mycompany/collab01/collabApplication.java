@@ -4,21 +4,16 @@
  */
 package com.mycompany.collab01;
 
-import com.mycompany.collab01.myexception.TooYoungException;
 import com.mycompany.collab01.storycategory.HappyStory;
 import com.mycompany.collab01.storycategory.IStory;
 import com.mycompany.collab01.storycategory.SadStory;
 import com.mycompany.collab01.storycategory.ViolentStory;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
 /**
  *
- * @author Nathan
+ * @author Timothy
  */
 public class collabApplication {
 
@@ -48,7 +43,7 @@ public class collabApplication {
                         break;
                     case 'V':
                         story = new ViolentStory();
-                        //這邊加入有無18歲的判斷式                        
+                        //這邊加入年齡的判斷                        
                         storylist = story.findStory();
                         story.readStory(storylist);
                         break;
