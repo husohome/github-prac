@@ -11,21 +11,6 @@ import java.io.IOException;
  *
  * @author Timothy
  */
-public class SadStory implements IStory {
-
-    @Override
-    public void displayStory(String name) throws IOException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public String listStory() throws IOException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public File getGenreLocation() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+public class SadStory{
 
 }
