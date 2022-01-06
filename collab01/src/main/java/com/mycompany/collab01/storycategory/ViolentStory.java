@@ -19,9 +19,9 @@ import java.util.Scanner;
 public class ViolentStory implements IStory {
 
     @Override
-    public void readStory(String name) throws IOException {
+    public void displayStory(String name) throws IOException {
 
-        File file = getStoryRoot();
+        File file = getGenreLocation();
         String storyLocation = file.toString().concat("/" + name + ".txt");
         try ( FileReader fr = new FileReader(storyLocation);
                 BufferedReader br = new BufferedReader(fr)) {
@@ -37,7 +37,7 @@ public class ViolentStory implements IStory {
     }
 
     @Override
-    public String findStory() throws IOException {
+    public String listStory() throws IOException {
         Files.list(Paths.get("storylib/violent")).forEach(System.out::println);
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
@@ -45,7 +45,7 @@ public class ViolentStory implements IStory {
     }
 
     @Override
-    public File getStoryRoot() {
+    public File getGenreLocation() {
         File file = new File("storylib/violent");
         return file;
     }

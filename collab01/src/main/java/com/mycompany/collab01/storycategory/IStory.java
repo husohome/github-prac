@@ -4,6 +4,7 @@
  */
 package com.mycompany.collab01.storycategory;
 
+import com.mycompany.collab01.myexception.TooYoungException;
 import java.io.File;
 import java.io.IOException;
 
@@ -13,11 +14,11 @@ import java.io.IOException;
  */
 public interface IStory {
 
-    public void readStory(String name) throws IOException;
+    public void displayStory(String name) throws IOException;
 
-    public String findStory() throws IOException;
+    public String listStory() throws IOException;
 
-    public File getStoryRoot();
+    public File getGenreLocation();
 
-    //default boolean ageCheck() throws TooYoungException{}
+    default boolean checkAge() throws TooYoungException{ return true; }
 }

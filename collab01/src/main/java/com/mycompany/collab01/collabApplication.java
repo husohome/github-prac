@@ -32,20 +32,16 @@ public class collabApplication {
             try {
                 switch (action.toUpperCase().charAt(0)) {
                     case 'H':
-                        story = new HappyStory();
-                        storylist = story.findStory();
-                        story.readStory(storylist);
+                        
                         break;
                     case 'S':
-                        story = new SadStory();
-                        storylist = story.findStory();
-                        story.readStory(storylist);
+
                         break;
                     case 'V':
                         story = new ViolentStory();
                         //這邊加入年齡的判斷                        
-                        storylist = story.findStory();
-                        story.readStory(storylist);
+                        storylist = story.listStory();
+                        story.displayStory(storylist);
                         break;
                 }
             } catch (IOException ex) {

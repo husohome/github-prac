@@ -14,17 +14,17 @@ import java.io.IOException;
 public class HappyStory implements IStory {
 
     @Override
-    public void readStory(String name) throws IOException {
+    public void displayStory(String name) throws IOException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public String findStory() throws IOException {
+    public String listStory() throws IOException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public File getStoryRoot() {
+    public File getGenreLocation() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
